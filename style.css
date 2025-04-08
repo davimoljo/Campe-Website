@@ -1,0 +1,166 @@
+.navbarLinks {
+  
+  margin-left: 370px;
+}
+.logo {
+  margin-left: 105px;
+}
+
+.firstBackgroundDefiniton {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("campefoto.png"); 
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+*:not(option) {
+  font-family: "Boldonse", system-ui;
+  color: whitesmoke;
+}
+option {
+  color: black;
+}
+.title{
+  padding-top: 50px;
+}
+
+.aboutUs {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.textAboutUs {
+  width: 620px;
+  height: 100%;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+.membersPhotos {
+  width: 520px;
+  margin-left: 70px;
+  display: flex;
+  gap: 80px;
+  
+}
+.profile-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  display: block;
+  color: white;
+}
+.profile-text {
+  text-align: center;
+}
+
+.profile-role {
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.numbers-section {
+  
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  height: 200px;
+}
+
+.numbers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  
+  margin: 0 auto;
+}
+
+.numbers-title h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.numbers-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.numbers-item {
+  text-align: center;
+}
+
+.numbers-item img {
+  width: 90px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.numbers-item h3 {
+  font-size: 38px;
+  font-weight: bold;
+  
+}
+
+.numbers-item p {
+  color: white;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.secondBackgroundDefinition {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("campefoto2.jpg"); /* Caminho da imagem */
+  background-position: center; /* Centraliza a imagem */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contact-wrapper {
+  display: flex;
+  
+}
+.contactUs {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 620px;
+}
+.contact-container {
+  margin-top: 65px;
+}
+.contact-link {
+  margin: 15px 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #facb41; 
+}
