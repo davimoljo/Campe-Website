@@ -7,7 +7,7 @@
 
 .first-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto3.jpg");
+    url("campefoto3.jpg.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body * {
 }
 
 body option,
-body .footer-campe {
+body  .footer-campe span{
   color: initial;
 }
 option {
@@ -164,36 +164,44 @@ a {
 a:hover {
   color: #facb41;
 }
-.footer-campe{
+.footer-campe {
   background-color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
   max-height: 10px;
-  display: flex;
 }
+
 .left-footer {
-  
-  font-size: 14px;
-  color: black;
-  margin-left: 200px;
-  
-  
-}
-.right-footer {
-  
-  font-size: 14px;
-  color: black;
   display: flex;
-  
-  
+  align-items: center;
+  gap: 10px; /* Espaço entre span, img, e link */
+  margin-left: 250px; /* Distância da tela */
+  color: black;
+  font-size: 14 px;
 }
+
+.right-footer {
+  display: flex;
+  gap: 90px;
+  font-size: 14px;
+  color: black;
+  margin-right: 200px;
+}
+
 .icon-footer {
   width: 20px;
   height: 20px;
 }
+
 .footer-campe a {
   color: black;
-  margin-left: 10px;
   font-size: 14px;
+  text-decoration: none;
 }
+
 .footer-campe a:hover {
   color: #facb41;
 }
