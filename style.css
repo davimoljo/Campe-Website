@@ -1,60 +1,77 @@
+/* NAVBAR STYLES */
 .navbarLinks {
-  margin-left: 370px;
-}
-.logo {
-  margin-left: 105px;
+  margin-left: 370px; /* Push navbar links to the right */
 }
 
+.logo {
+  margin-left: 105px; /* Space to the left of the logo */
+}
+
+/* MAIN BACKGROUND SECTION (TOP OF THE PAGE) */
 .first-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto3.jpg.jpeg");
-  background-position: center;
-  background-size: cover;
+    url("campefoto3.jpg.jpeg"); /* Dark overlay with background image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Image covers the whole area */
   background-repeat: no-repeat;
+  padding-top: 80px; /* Space for fixed navbar */
 }
+
+/* GLOBAL FONT AND TEXT COLOR */
 body * {
-  font-family: "Boldonse", system-ui;
-  color: whitesmoke;
+  font-family: "Boldonse", system-ui; /* Custom font */
+  color: whitesmoke; /* Light text color */
 }
 
 body option,
-body  .footer-campe span{
-  color: initial;
-}
-option {
-  color: black;
-}
-.title {
-  padding-top: 50px;
+body .footer-campe span {
+  color: initial; /* Reset color for specific elements */
 }
 
+option {
+  color: black; /* Options in dropdowns appear black */
+}
+
+/* SECTION TITLE */
+.title {
+  padding-top: 50px; /* Space above title */
+}
+
+/* ABOUT US SECTION */
 .about-us {
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
 }
+
 .text-aboutus {
   width: 620px;
   height: 100%;
   font-size: 18px;
   margin-bottom: 50px;
 }
+
+/* PROFILE IMAGES STYLING */
 .profile-img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
 .profile-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slight zoom on hover */
 }
+
+/* LAYOUT FOR TEAM MEMBER PHOTOS */
 .members-photos {
   width: 520px;
   margin-left: 70px;
   display: flex;
-  gap: 80px;
+  gap: 80px; /* Space between photos */
 }
+
+/* STYLES FOR PROFILE NAMES AND ROLES */
 .profile-name {
   font-weight: bold;
   margin-bottom: 10px;
@@ -63,8 +80,9 @@ option {
   display: block;
   color: white;
 }
+
 .profile-text {
-  text-align: center;
+  text-align: center; /* Center text under images */
 }
 
 .profile-role {
@@ -74,8 +92,9 @@ option {
   margin-bottom: 30px;
 }
 
+/* NUMBERS / STATS SECTION */
 .numbers-section {
-  background-color: #333;
+  background-color: #333; /* Dark background */
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -88,7 +107,6 @@ option {
   justify-content: center;
   align-items: center;
   gap: 50px;
-
   margin: 0 auto;
 }
 
@@ -96,7 +114,6 @@ option {
   color: white;
   font-weight: 700;
   font-size: 40px;
-  font-weight: bold;
 }
 
 .numbers-box {
@@ -113,7 +130,7 @@ option {
 .numbers-item img {
   width: 90px;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 20px; /* Rounded image corners */
 }
 
 .numbers-item h3 {
@@ -127,34 +144,43 @@ option {
   font-size: 14px;
   font-weight: bold;
 }
+
+/* SECOND BACKGROUND SECTION */
 .second-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto2.jpg"); /* Caminho da imagem */
-  background-position: center; /* Centraliza a imagem */
+    url("campefoto2.jpg"); /* Another image with dark overlay */
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* CONTACT SECTION */
 .contact-wrapper {
-  display: flex;
+  display: flex; /* Place contact elements side-by-side */
 }
+
 .contact-us {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
   width: 620px;
 }
+
 .contact-container {
   margin-top: 65px;
 }
+
 .contact-link {
   margin: 15px 0;
 }
 
+/* ICONS USED THROUGHOUT SITE */
 .icon {
   width: 30px;
   height: 30px;
 }
 
+/* LINK STYLES */
 a {
   text-decoration: none;
   color: white;
@@ -162,8 +188,10 @@ a {
 }
 
 a:hover {
-  color: #facb41;
+  color: #facb41; /* Yellow on hover */
 }
+
+/* FOOTER STYLING */
 .footer-campe {
   background-color: white;
   padding: 20px 0;
@@ -177,10 +205,10 @@ a:hover {
 .left-footer {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaço entre span, img, e link */
-  margin-left: 250px; /* Distância da tela */
+  gap: 10px;
+  margin-left: 250px;
   color: black;
-  font-size: 14 px;
+  font-size: 14px; /* Removed space between 14 and px */
 }
 
 .right-footer {
@@ -203,5 +231,5 @@ a:hover {
 }
 
 .footer-campe a:hover {
-  color: #facb41;
+  color: #facb41; /* Yellow highlight on hover */
 }
