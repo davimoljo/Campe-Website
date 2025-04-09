@@ -1,35 +1,39 @@
 .navbarLinks {
-  
   margin-left: 370px;
 }
 .logo {
   margin-left: 105px;
 }
 
-.firstBackgroundDefiniton {
+.first-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto.png"); 
-  background-position: center; 
+    url("campefoto3.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-*:not(option) {
+body * {
   font-family: "Boldonse", system-ui;
   color: whitesmoke;
+}
+
+body option,
+body .footer-campe {
+  color: initial;
 }
 option {
   color: black;
 }
-.title{
+.title {
   padding-top: 50px;
 }
 
-.aboutUs {
+.about-us {
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
 }
-.textAboutUs {
+.text-aboutus {
   width: 620px;
   height: 100%;
   font-size: 18px;
@@ -45,12 +49,11 @@ option {
 .profile-img:hover {
   transform: scale(1.05);
 }
-.membersPhotos {
+.members-photos {
   width: 520px;
   margin-left: 70px;
   display: flex;
   gap: 80px;
-  
 }
 .profile-name {
   font-weight: bold;
@@ -72,7 +75,6 @@ option {
 }
 
 .numbers-section {
-  
   background-color: #333;
   color: white;
   padding: 10px 20px;
@@ -86,7 +88,7 @@ option {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  
+
   margin: 0 auto;
 }
 
@@ -117,7 +119,6 @@ option {
 .numbers-item h3 {
   font-size: 38px;
   font-weight: bold;
-  
 }
 
 .numbers-item p {
@@ -126,18 +127,17 @@ option {
   font-size: 14px;
   font-weight: bold;
 }
-.secondBackgroundDefinition {
+.second-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url("campefoto2.jpg"); /* Caminho da imagem */
+    url("campefoto2.jpg"); /* Caminho da imagem */
   background-position: center; /* Centraliza a imagem */
   background-size: cover;
   background-repeat: no-repeat;
 }
 .contact-wrapper {
   display: flex;
-  
 }
-.contactUs {
+.contact-us {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
@@ -162,5 +162,38 @@ a {
 }
 
 a:hover {
-  color: #facb41; 
+  color: #facb41;
+}
+.footer-campe{
+  background-color: white;
+  max-height: 10px;
+  display: flex;
+}
+.left-footer {
+  
+  font-size: 14px;
+  color: black;
+  margin-left: 200px;
+  
+  
+}
+.right-footer {
+  
+  font-size: 14px;
+  color: black;
+  display: flex;
+  
+  
+}
+.icon-footer {
+  width: 20px;
+  height: 20px;
+}
+.footer-campe a {
+  color: black;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.footer-campe a:hover {
+  color: #facb41;
 }
