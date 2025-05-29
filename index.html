@@ -20,29 +20,18 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wallpoet&display=swap"
       rel="stylesheet"
       />
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "7wKFXbyQDiP7NoSSg",
+              publicKey: "Q7ntUitAkno-Yc5RU",
+              
+
             });
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_2hi47rl', 'template_93h65c8', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+    
       </head>
       <body>
         <!-- Navigation bar -->
@@ -78,10 +67,10 @@
               <form id="contact-form">
                 <!-- Segmento -->  
                 <div class="mb-3">
-                  <label for="segmento"  id="segmento" class="form-label"
+                  <label for="porte"   class="form-label"
                   >Qual o Escopo do Projeto?</label
                   >
-                  <select class="form-control" name="porte" rows="4" required>
+                  <select class="form-control" id="escopo" name="porte" rows="4" required>
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="Mapeamento">Mapeamento de Processos</option>
                     <option value="Pesquisa">Pesquisa de Mercado</option>
@@ -93,45 +82,45 @@
                 </div>
                 <!-- Porte -->
                 <div class="mb-3">
-                  <label for="porte" name="porte" id="porte" class="form-label"
+                  <label for="escopo"  class="form-label"
                   >Qual o tamanho da empresa?</label
                   >
-                  <select class="form-control" name="escopo"  rows="4" required>
+                  <select class="form-control" id="porte" name="escopo"  rows="4" required>
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="Grande">Grande</option>
-                    <option value="Media">Media</option>
-                    <option value="Mei">MEI</option>
+                    <option value="Grande">Media</option>
+                    <option value="Pequena">MEI</option>
                     <option value="Mej">MEJ</option>
                     <option value="Pequena">Pequena</option>
-                    <option value="Microempresa">Microempresa</option>
+                    <option value="Pequena">Microempresa</option>
                     <option value="Pessoa">Pessoa Física</option>
                   </select>
                 </div>
                 <!-- Desafios -->
                 <div class="mb-3">
-                  <label for="mensagem" id="idade" class="form-label"
+                  <label for="idade" class="form-label"
                   > Qual a sua idade?</label
                   >
-                  <select class="form-control" name="idade" rows="4" required>
+                  <select class="form-control" id="idade" name="idade" rows="4" required>
                     <option value="" disabled selected>Selecione uma opção</option>
-                    <option value="18">18-23</option>
-                    <option value="24">24-35</option>
-                    <option value="36">36-47</option>
-                    <option value="48">48-53</option>
-                    <option value="54">54-65</option>
-                    <option value="66">66-71</option>
-                    <option value="72">72+</option>
+                    <option value="jovem1">18-23</option>
+                    <option value="jovem1">24-35</option>
+                    <option value="senior">36-47</option>
+                    <option value="senior">48-53</option>
+                    <option value="senior">54-65</option>
+                    <option value="senior">66-71</option>
+                    <option value="senior">72+</option>
                     
                   </select>
                 </div>
                 <div class="mb-3">
-                  <label for="finaliza"  id="finaliza" class="form-label"
+                  <label for="finaliza"   class="form-label"
                   >O projeto finaliza neste semestre?</label
                   >
-                  <select class="form-control" name="finaliza" rows="4" required>
+                  <select class="form-control" id="finaliza" name="finaliza" rows="4" required>
                     <option value="" disabled selected>Selecione uma opção</option>
-                    <option value="Sim">Sim</option>
-                    <option value="Nao">Não</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
                   </select>
                 </div>
                 <!-- Email -->
@@ -139,7 +128,7 @@
                   <label for="email"  class="form-label"
                   >Qual o seu email de contato?</label
                   >
-                  <input class="form-control" name="email" type="email" placeholder="Digite o seu email" aria-label="default input example">
+                  <input class="form-control" name="email" id= "email" type="email" placeholder="Digite o seu email" aria-label="default input example">
                   
                 </div>
                 <!-- Submit button -->
