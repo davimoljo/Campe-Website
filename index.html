@@ -26,7 +26,13 @@
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
               publicKey: "Q7ntUitAkno-Yc5RU",
-              
+              limitRate: {
+    // Set the limit rate for the application
+    
+    // Allow 1 request per 10s
+    throttle: 60000,
+    
+  },
 
             });
         })();

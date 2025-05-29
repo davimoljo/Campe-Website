@@ -249,6 +249,7 @@ window.onload = function () {
       }).then(
         () => {
           console.log("SUCCESS!");
+          alert("Formulário enviado com sucesso! Cheque o seu email.");
         },
         (error) => {
           console.log("FAILED...", error);
