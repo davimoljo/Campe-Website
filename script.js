@@ -229,27 +229,64 @@ A rotatividade de profissionais ao longo do projeto tem causado falhas de comuni
 `,
   };
 
+function canSendEmail() {
+    const lastSent = localStorage.getItem('lastSent');
+    if (!lastSent) return true;
 
+    const now = Date.now();
+    return (now - lastSent) > 5*60000; // 60 segundos
+}
+
+function updateLastSentTime() {
+    localStorage.setItem('lastSent', Date.now());
+}
 window.onload = function () {
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      const escopo= this.querySelector("#escopo").value;
-      const porte= this.querySelector("#porte").value;
-      const idade= this.querySelector("#idade").value;
-      const finaliza= this.querySelector("#finaliza").value;
+      if (!canSendEmail()) {
+        alert("Aguarde 5 minutos antes de enviar novamente.");
+        return;
+    }
+      const escopo= this.querySelector("#escopo");
+      const porte= this.querySelector("#porte");
+      const idade= this.querySelector("#idade");
+      const finaliza= this.querySelector("#finaliza");
+      const email = this.querySelector("#email").value;
       // these IDs from the previous steps
+      fetch("https://hook.us2.make.com/fs3i5rtx9cgrvngjnj56i6h68dkeja9x", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          escopo: escopo.options[escopo.selectedIndex].innerText,
+          porte: porte.options[porte.selectedIndex].innerText,
+          idade: idade.options[idade.selectedIndex].innerText,
+          finaliza: finaliza.options[finaliza.selectedIndex].innerText,
+          email
+        }),
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          console.log("Success: Excel", data);
+          
+        })
+        .catch((error) => {
+          console.error("Error: Excel", error);
+        });
       emailjs.send("service_wj8lsfi", "template_wlgsysk", {
-        texto1: textoPorEscopo[escopo],
-        texto2: tamanhoEmpresaTexto[porte],
-        texto3: textoIdadeCliente[idade],
-        texto4: finalizaNesteSemestre[finaliza],
-        email: this.querySelector("#email").value,
+        texto1: textoPorEscopo[escopo.value],
+        texto2: tamanhoEmpresaTexto[porte.value],
+        texto3: textoIdadeCliente[idade.value],
+        texto4: finalizaNesteSemestre[finaliza.value],
+        email
       }).then(
         () => {
           console.log("SUCCESS!");
           alert("Formulário enviado com sucesso! Cheque o seu email.");
+           updateLastSentTime();
         },
         (error) => {
           console.log("FAILED...", error);
