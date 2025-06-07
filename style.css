@@ -234,3 +234,94 @@ a:hover {
 .footer-campe a:hover {
   color: #facb41; /* Yellow highlight on hover */
 }
+@media (max-width: 768px) {
+  /* GERAL */
+  body {
+    font-size: 14px;
+  }
+
+  .navbarLinks {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-us,
+  .contact-us {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .text-aboutus,
+  .contact-us {
+    width: 100%;
+  }
+
+  .members-photos {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .profile-role {
+    font-size: 1.2rem;
+  }
+
+  .numbers-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .numbers-title h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .numbers-item h3 {
+    font-size: 28px;
+  }
+
+  .numbers-item p {
+    font-size: 12px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-campe {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .left-footer,
+  .right-footer {
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .right-footer {
+    gap: 30px;
+  }
+}

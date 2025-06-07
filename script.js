@@ -6,15 +6,15 @@
 function scrollToSection(linkId, targetId, offset = 0) {
   // Add click event listener to the link
   document.getElementById(linkId).addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent the default jump to anchor behavior
+    e.preventDefault(); // Prevent default anchor jump
 
     const destino = document.getElementById(targetId); // Get the target section element
 
     if (destino) {
-      // Calculate the vertical scroll position, including the offset
+      // Calculate vertical scroll position with offset
       const y = destino.getBoundingClientRect().top + window.scrollY + offset;
 
-      // Scroll smoothly to the calculated position
+      // Smooth scroll to the calculated position
       window.scrollTo({
         top: y,
         behavior: "smooth",
@@ -23,12 +23,14 @@ function scrollToSection(linkId, targetId, offset = 0) {
   });
 }
 
-// Apply the scrollToSection function for each navigation link and its target section
+// Assign scroll behavior to each menu item
 scrollToSection("inicio", "first-container", -130);
 scrollToSection("sobre", "aboutus-container", -80);
-scrollToSection("contato", "contactus-container", 0); // No offset needed here
+scrollToSection("contato", "contactus-container", 0); // No offset needed
 
+// Text mappings based on selected scope (escopo)
 const textoPorEscopo = {
+  // Original Portuguese text maintained intentionally for Brazilian users
   "Mapeamento": `Histórico de projetos semelhantes mostra um padrão importante: quanto mais longo o projeto de Mapeamento de Processos, maior a probabilidade de insatisfação relacionada à rotatividade da equipe.
 Em especial, a troca de profissionais ao longo do projeto tem causado confusão, perda de contexto e atrasos, comprometendo diretamente a percepção de valor do cliente.
 
@@ -126,7 +128,7 @@ Isso ocorre porque a entrega final supera as expectativas iniciais, tanto pela q
  Nenhum: ''
 };
 
-
+// Text mappings based on company size (porte)
 const tamanhoEmpresaTexto = {
   Grande: `Histórico de projetos semelhantes mostra um padrão crítico: empresas de grande e médio porte têm demonstrado uma expectativa por conteúdos mais profundos e técnicos.
 
@@ -169,7 +171,7 @@ A presença física da equipe durante reuniões e a interação direta com o cli
   
   pessoaFisica: ""
 };
-
+// Text mappings based on client age range (idade)
 const textoIdadeCliente = {
   jovem1: `
 A percepção de que os projetos superam as expectativas tem sido notada especialmente entre os clientes mais jovens. Isso ocorre devido à execução rápida, à qualidade do serviço e à comunicação eficaz, que encantam esses clientes e geram uma sensação de surpresa positiva.
@@ -206,7 +208,7 @@ A ausência de dados detalhados e análises robustas gerou desconfiança, pois o
 - Garantir um alinhamento contínuo e transparente com o cliente, para que as expectativas sejam atendidas em todas as fases do projeto.
 `,
 };
-
+// Text shown if the project does not end this semester
 const finalizaNesteSemestre = {
   sim: '',
   nao: `
@@ -228,7 +230,7 @@ A rotatividade de profissionais ao longo do projeto tem causado falhas de comuni
 - Registrar decisões e processos de forma eficiente, assegurando que todos os envolvidos estejam bem informados.
 `,
   };
-
+// Checks if enough time has passed to allow resending email (5 minutes)
 function canSendEmail() {
     const lastSent = localStorage.getItem('lastSent');
     if (!lastSent) return true;
@@ -237,24 +239,31 @@ function canSendEmail() {
     return (now - lastSent) > 5*60000; // 60 segundos
 }
 
+// Updates the time the form was last submitted
 function updateLastSentTime() {
     localStorage.setItem('lastSent', Date.now());
 }
+
+// On page load, set up form submission handler
 window.onload = function () {
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
-      event.preventDefault();
+      event.preventDefault(); // Prevent page reload
+
       if (!canSendEmail()) {
         alert("Aguarde 5 minutos antes de enviar novamente.");
         return;
-    }
-      const escopo= this.querySelector("#escopo");
-      const porte= this.querySelector("#porte");
-      const idade= this.querySelector("#idade");
-      const finaliza= this.querySelector("#finaliza");
+      }
+
+      // Get selected options and input value
+      const escopo = this.querySelector("#escopo");
+      const porte = this.querySelector("#porte");
+      const idade = this.querySelector("#idade");
+      const finaliza = this.querySelector("#finaliza");
       const email = this.querySelector("#email").value;
-      // these IDs from the previous steps
+
+      // Send form data to Make webhook
       fetch("https://hook.us2.make.com/fs3i5rtx9cgrvngjnj56i6h68dkeja9x", {
         method: "POST",
         headers: {
@@ -271,11 +280,12 @@ window.onload = function () {
         .then((response) => response.text())
         .then((data) => {
           console.log("Success: Excel", data);
-          
         })
         .catch((error) => {
           console.error("Error: Excel", error);
         });
+
+      // Send email using EmailJS
       emailjs.send("service_wj8lsfi", "template_wlgsysk", {
         texto1: textoPorEscopo[escopo.value],
         texto2: tamanhoEmpresaTexto[porte.value],
@@ -286,7 +296,7 @@ window.onload = function () {
         () => {
           console.log("SUCCESS!");
           alert("Formulário enviado com sucesso! Cheque o seu email.");
-           updateLastSentTime();
+          updateLastSentTime();
         },
         (error) => {
           console.log("FAILED...", error);
