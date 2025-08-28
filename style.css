@@ -1,327 +1,291 @@
-/* NAVBAR STYLES */
-.navbarLinks {
-  margin-left: 370px; /* Push navbar links to the right */
-}
-
-.logo {
-  margin-left: 105px; /* Space to the left of the logo */
-}
-
-/* MAIN BACKGROUND SECTION (TOP OF THE PAGE) */
-.first-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto3.jpg.jpeg"); /* Dark overlay with background image */
-  background-position: center; /* Center the image */
-  background-size: cover; /* Image covers the whole area */
-  background-repeat: no-repeat;
-  padding-top: 80px; /* Space for fixed navbar */
-}
-
-/* GLOBAL FONT AND TEXT COLOR */
+/* =================================
+   ESTILOS GERAIS E PADRÃO DO CONTEÚDO
+   ================================= */
 body * {
-  font-family: "Boldonse", system-ui; /* Custom font */
-  color: whitesmoke; /* Light text color */
+  font-family: "Montserrat", system-ui;
 }
 
-body option,
-body .footer-campe span {
-  color: initial; /* Reset color for specific elements */
+/* Define um container principal para alinhar o conteúdo */
+.main-container {
+    width: 100%;
+    max-width: 1140px; /* Largura padrão para o conteúdo */
+    margin: 0 auto;
+    padding: 0 20px; /* Espaçamento lateral de segurança */
 }
 
-option {
-  color: black; /* Options in dropdowns appear black */
-}
-
-/* SECTION TITLE */
-.title {
-  padding-top: 50px; /* Space above title */
-}
-
-/* ABOUT US SECTION */
-.about-us {
-  
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.text-aboutus {
-  width: 620px;
-  height: 100%;
-  font-size: 18px;
-  margin-bottom: 50px;
-}
-
-/* PROFILE IMAGES STYLING */
-.profile-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover; /* Ensures the image covers the space without distortion */
-  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
-}
-
-.profile-img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* LAYOUT FOR TEAM MEMBER PHOTOS */
-.members-photos {
-  width: 520px;
-  margin-left: 70px;
-  display: flex;
-  gap: 80px; /* Space between photos */
-}
-
-/* STYLES FOR PROFILE NAMES AND ROLES */
-.profile-name {
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-size: 1.8rem;
-  display: block;
-  color: white;
-}
-
-.profile-text {
-  text-align: center; /* Center text under images */
-}
-
-.profile-role {
-  font-size: 1.5rem;
-  color: white;
-  display: block;
-  margin-bottom: 30px;
-}
-
-/* NUMBERS / STATS SECTION */
-.numbers-section {
-  background-color: #333; /* Dark background */
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  height: 200px;
-}
-
-.numbers-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin: 0 auto;
-}
-
-.numbers-title h2 {
-  color: white;
-  font-weight: 700;
-  font-size: 40px;
-}
-
-.numbers-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
-}
-
-.numbers-item {
-  text-align: center;
-}
-
-.numbers-item img {
-  width: 90px;
-  margin-bottom: 10px;
-  border-radius: 20px; /* Rounded image corners */
-}
-
-.numbers-item h3 {
-  font-size: 38px;
-  font-weight: bold;
-}
-
-.numbers-item p {
-  color: white;
-  margin-top: 4px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* SECOND BACKGROUND SECTION */
-.second-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("campefoto2.jpg"); /* Another image with dark overlay */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* CONTACT SECTION */
-.contact-wrapper {
-  display: flex; /* Place contact elements side-by-side */
-}
-
-.contact-us {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  width: 620px;
-}
-
-.contact-container {
-  margin-top: 65px;
-}
-
-.contact-link {
-  margin: 15px 0;
-}
-
-/* ICONS USED THROUGHOUT SITE */
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
-/* LINK STYLES */
 a {
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* =================================
+   NAVBAR
+   ================================= */
+/* =================================
+   NAVBAR
+   ================================= */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Remove o espaçamento interno para a logo ir mais para a esquerda */
+.navbar .main-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-brand img {
+    width: 180px; 
+    height: auto;
+}
+
+.navbar .nav-link {
+    color: #333 !important;
+    
+}
+
+/* Removemos a regra de centralização automática que estava aqui */
+.navbar .navbar-collapse {
+    /* Vazio de propósito */
+}
+
+/* Nova regra para posicionar os links manualmente */
+.navbar .navbar-nav {
+    /* Empurra os links para uma posição mais à esquerda do centro */
+    margin-left: 30%;
+}
+/* =================================
+   SEÇÃO DO FORMULÁRIO (TOPO)
+   ================================= */
+.first-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("campefoto3.jpg.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0 100px 0;
   color: white;
-  font-weight: 500;
+}
+#first-container {
+    padding-bottom: 100px; /* Adiciona espaço entre o formulário e a seção "Sobre nós" */
+}
+#contact-form {
+    max-width: 100%; /* Limita a largura do formulário */
+}
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.form-label {
+    color: white;
 }
 
-a:hover {
-  color: #facb41; /* Yellow on hover */
+/* =================================
+   SEÇÃO SOBRE NÓS
+   ================================= */
+/* A REGRA .about-us-section foi removida */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-aboutus {
+    width: 58%; /* Mais espaço para o texto */
+}
+.text-aboutus h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.text-aboutus p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f8f9fa;
+}
+.members-photos {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.profile-link {
+    text-align: center;
+    color: white;
+}
+.profile-link:hover {
+    color: #ffc107; /* Amarelo da Campe */
+}
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.profile-role {
+    font-size: 1.1rem;
+    color: #adb5bd;
 }
 
-/* FOOTER STYLING */
+
+/* =================================
+   SEÇÃO NÚMEROS
+   ================================= */
+.numbers-section {
+  background-color: #343a40; 
+  padding: 60px 0;
+}
+.numbers-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.numbers-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+}
+.numbers-box {
+  display: flex;
+  gap: 60px;
+}
+.numbers-item {
+  text-align: center;
+  color: white;
+}
+.numbers-item img {
+  width: 90px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.numbers-item h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.numbers-item p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* =================================
+   SEÇÃO CONTATO
+   ================================= */
+.second-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("campefoto2.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+}
+.contact-wrapper {
+  
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.contact-us {
+    width: 55%;
+}
+.contact-us h2, .contact-container h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contact-us p {
+    line-height: 1.6;
+    color: #f8f9fa;
+}
+.contact-container {
+    width: 40%;
+}
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.contact-link a {
+    color: white;
+}
+.contact-link a:hover {
+    color: #ffc107;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+/* =================================
+   RODAPÉ
+   ================================= */
 .footer-campe {
   background-color: white;
   padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  max-height: 10px;
+  color: #333;
+  font-size: 0.9rem;
 }
-
-.left-footer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 250px;
-  color: black;
-  font-size: 14px; /* Removed space between 14 and px */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.right-footer {
-  display: flex;
-  gap: 90px;
-  font-size: 14px;
-  color: black;
-  margin-right: 200px;
+.left-footer, .right-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-
+.left-footer a {
+    color: #333;
+    font-weight: 500;
+}
 .icon-footer {
-  width: 20px;
-  height: 20px;
+    width: 18px;
+    height: 18px;
+}
+.icon-footer:hover, .left-footer a:hover {
+    color: #ffc107;
 }
 
-.footer-campe a {
-  color: black;
-  font-size: 14px;
-  text-decoration: none;
-}
+/* =================================
+   RESPONSIVIDADE (TABLET E CELULAR)
+   ================================= */
+@media (max-width: 991px) {
+    /* Ajusta todos os layouts de flex para coluna */
+    .about-us, .numbers-container, .contact-wrapper, .footer-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
 
-.footer-campe a:hover {
-  color: #facb41; /* Yellow highlight on hover */
-}
-@media (max-width: 768px) {
-  /* GERAL */
-  body {
-    font-size: 14px;
-  }
+    /* Ocupa 100% da largura */
+    .text-aboutus, .members-photos, .contact-us, .contact-container {
+        width: 100%;
+    }
+    
+    #first-container {
+        padding-bottom: 60px;
+    }
 
-  .navbarLinks {
-    margin-left: 0;
-    text-align: center;
-  }
+    .members-photos {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .logo {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .about-us,
-  .contact-us {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .text-aboutus,
-  .contact-us {
-    width: 100%;
-  }
-
-  .members-photos {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .profile-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .profile-name {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .profile-role {
-    font-size: 1.2rem;
-  }
-
-  .numbers-section {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .numbers-title h2 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .numbers-item h3 {
-    font-size: 28px;
-  }
-
-  .numbers-item p {
-    font-size: 12px;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-campe {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .left-footer,
-  .right-footer {
-    margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .right-footer {
-    gap: 30px;
-  }
+    .contact-link {
+        justify-content: center;
+    }
+    
+    .footer-container {
+        gap: 20px;
+    }
+    .right-footer {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Page settings and metadata -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário para empresas parceiras</title>
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wallpoet&display=swap"
       rel="stylesheet"
-      />
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "Q7ntUitAkno-Yc5RU",
-             
-
-            });
-        })();
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "Q7ntUitAkno-Yc5RU",
+        });
+      })();
     </script>
-    
-      </head>
-      <body>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
-          <div class="container-fluid">
-            <!-- Logo -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+      <div class="container-fluid main-container">
+        <a class="navbar-brand" href="#">
             <img
             src="logocampe.jpg"
             alt="Logo"
-            width="200"
-            height="44"
-            class="logo"
             />
-            <!-- Navigation links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item navbarLinks">
-                  <a class="nav-link" id="inicio" href="#first-container">Início</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" id="sobre" href="#aboutus-container">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" id="contato" href="#contactus-container">Contato</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        </a>
         
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Contact form section -->
-          <div class="first-background">
-            <div class="container mt" id="first-container"> 
-              <h2 class="title">Entre em Contato, retratando sua experiência!</h2> 
-              <!-- Contact form -->
-              <form id="contact-form">
-                <!-- Segmento -->  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="inicio" href="#first-container">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="sobre" href="#aboutus-container">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contato" href="#contactus-container">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="first-background">
+        <div class="main-container" id="first-container">
+            <h2 class="title">Entre em Contato, retratando sua experiência!</h2>
+            <form id="contact-form">
                 <div class="mb-3">
-                  <label for="porte"   class="form-label"
-                  >Qual o Escopo do Projeto?</label
-                  >
-                  <select class="form-control" id="escopo" name="porte" rows="4" required>
+                <label for="porte" class="form-label"
+                    >Qual o Escopo do Projeto?</label
+                >
+                <select
+                    class="form-control"
+                    id="escopo"
+                    name="porte"
+                    rows="4"
+                    required
+                >
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="Mapeamento">Mapeamento de Processos</option>
                     <option value="Pesquisa">Pesquisa de Mercado</option>
                     <option value="Planejamento">Planejamento Estratégico</option>
-                    <option value="Estruturação">Estruturação+Assessoria Financeira</option>
+                    <option value="Estruturação">
+                    Estruturação+Assessoria Financeira
+                    </option>
                     <option value="Valuation">Valuation</option>
                     <option value="Nenhum">Nenhum desses</option>
-                  </select>
+                </select>
                 </div>
-                <!-- Porte -->
                 <div class="mb-3">
-                  <label for="escopo"  class="form-label"
-                  >Qual o tamanho da empresa?</label
-                  >
-                  <select class="form-control" id="porte" name="escopo"  rows="4" required>
+                <label for="escopo" class="form-label"
+                    >Qual o tamanho da empresa?</label
+                >
+                <select
+                    class="form-control"
+                    id="porte"
+                    name="escopo"
+                    rows="4"
+                    required
+                >
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="Grande">Grande</option>
                     <option value="Grande">Media</option>
@@ -94,14 +111,19 @@
                     <option value="Pequena">Pequena</option>
                     <option value="Pequena">Microempresa</option>
                     <option value="Pessoa">Pessoa Física</option>
-                  </select>
+                </select>
                 </div>
-                <!-- Desafios -->
                 <div class="mb-3">
-                  <label for="idade" class="form-label"
-                  > Qual a idade do cliente?</label
-                  >
-                  <select class="form-control" id="idade" name="idade" rows="4" required>
+                <label for="idade" class="form-label"
+                    >Qual a idade do cliente?</label
+                >
+                <select
+                    class="form-control"
+                    id="idade"
+                    name="idade"
+                    rows="4"
+                    required
+                >
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="jovem1">18-23</option>
                     <option value="jovem1">24-35</option>
@@ -110,179 +132,192 @@
                     <option value="senior">54-65</option>
                     <option value="senior">66-71</option>
                     <option value="senior">72+</option>
-                    
-                  </select>
+                </select>
                 </div>
                 <div class="mb-3">
-                  <label for="finaliza"   class="form-label"
-                  >O projeto finaliza neste semestre?</label
-                  >
-                  <select class="form-control" id="finaliza" name="finaliza" rows="4" required>
+                <label for="finaliza" class="form-label"
+                    >O projeto finaliza neste semestre?</label
+                >
+                <select
+                    class="form-control"
+                    id="finaliza"
+                    name="finaliza"
+                    rows="4"
+                    required
+                >
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
-                  </select>
+                </select>
                 </div>
-                <!-- Email -->
                 <div class="mb-3">
-                  <label for="email"  class="form-label"
-                  >Qual o seu email de contato?</label
-                  >
-                  <input class="form-control" name="email" id= "email" type="email" placeholder="Digite o seu email" aria-label="default input example">
-                  
+                <label for="email" class="form-label"
+                    >Qual o seu email de contato?</label
+                >
+                <input
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    type="email"
+                    placeholder="Digite o seu email"
+                    aria-label="default input example"
+                />
                 </div>
-                <!-- Submit button -->
                 <button type="submit" class="btn btn-outline-light">Enviar</button>
-              </form>
-              
-            </div>
-            <!-- About us section -->
-            <div class="about-us d-flex justify-content-start gap-3" id="aboutus-container">
-              <div class="text-aboutus">
+            </form>
+        </div>
+
+        <div class="main-container about-us" id="aboutus-container">
+            <div class="text-aboutus">
                 <h2>Sobre nós</h2>
-                <!-- Description of the company -->
                 <p>
-                  Somos uma empresa dedicada a ajudar outras empresas a superar desafios
-                  e alcançar seus objetivos. Nossa equipe é composta por especialistas
-                  em diversas áreas, prontos para oferecer soluções personalizadas.
-                  Nesses 32 anos de história, a Campe foi agraciada por ser a primeira
-                  Empresa Júnior do mundo a ser certificada pela norma ISO 9001, além de
-                  alcançar a faixa prata do Prêmio Mineiro da Qualidade. Foi considerada
-                  em 2010 a terceira melhor empresa júnior do Brasil e a melhor de Minas
-                  Gerais. Em 2014 foi a empresa júnior de maior faturamento e maior
-                  número de projetos no estado. Nossa missão é transformar o potencial
-                  de cada empresa em resultados concretos. Estamos aqui para ouvir suas
-                  necessidades e oferecer soluções que realmente façam a diferença.
-                  Entre em contato e descubra como podemos ajudar sua empresa a crescer
-                  e prosperar.
+                Somos uma empresa dedicada a ajudar outras empresas a superar
+                desafios e alcançar seus objetivos. Nossa equipe é composta por
+                especialistas em diversas áreas, prontos para oferecer soluções
+                personalizadas. Nesses 32 anos de história, a Campe foi agraciada
+                por ser a primeira Empresa Júnior do mundo a ser certificada pela
+                norma ISO 9001, além de alcançar a faixa prata do Prêmio Mineiro da
+                Qualidade. Foi considerada em 2010 a terceira melhor empresa júnior
+                do Brasil e a melhor de Minas Gerais. Em 2014 foi a empresa júnior
+                de maior faturamento e maior número de projetos no estado. Nossa
+                missão é transformar o potencial de cada empresa em resultados
+                concretos. Estamos aqui para ouvir suas necessidades e oferecer
+                soluções que realmente façam a diferença. Entre em contato e
+                descubra como podemos ajudar sua empresa a crescer e prosperar.
                 </p>
-              </div>
-              <!-- Team members section -->
-              <div class="members-photos">
-                <!-- Leonardo's profile -->
+            </div>
+            <div class="members-photos">
                 <a
                 href="https://www.linkedin.com/in/leonardo-teixeira-519b0429b/"
                 target="_blank"
                 class="profile-link text-decoration-none"
                 >
                 <img
-                src="leonardo.jpg.jpeg"
-                alt="Foto do Membro"
-                class="rounded-circle profile-img shadow-lg"
+                    src="leonardo.jpg.jpeg"
+                    alt="Foto do Membro"
+                    class="rounded-circle profile-img shadow-lg"
                 />
-                <br />
                 <div class="profile-text">
-                  <span class="profile-name">Leonardo <br> Teixeira</span>
-                  
-                  <span class="profile-role">Diretor Comercial</span>
+                    <span class="profile-name">Leonardo <br /> Teixeira</span>
+                    <span class="profile-role"> <br> Diretor Comercial</span>
                 </div>
-              </a>
-              <!-- Marylaine's profile -->
-              <a
-              href="https://www.linkedin.com/in/marylaine-medeiros-7003692b6/"
-              target="_blank"
-              class="profile-link text-decoration-none"
-              >
-              <img
-              src="mary.jpg"
-              alt="Foto do Membro"
-              class="rounded-circle profile-img shadow-lg"
-              />
-              <br />
-              <div class="profile-text">
-                <span class="profile-name">Marylaine <br> Medeiros</span>
-                <span class="profile-role">Gerente de Marketing</span>
-              </div>
-            </a>
-          </div>
+                </a>
+                <a
+                href="https://www.linkedin.com/in/marylaine-medeiros-7003692b6/"
+                target="_blank"
+                class="profile-link text-decoration-none"
+                >
+                <img
+                    src="mary.jpg"
+                    alt="Foto do Membro"
+                    class="rounded-circle profile-img shadow-lg"
+                />
+                <div class="profile-text">
+                    <span class="profile-name">Marylaine <br /> Medeiros</span>
+                    <span class="profile-role"> <br> Gerente de Marketing</span>
+                </div>
+                </a>
+            </div>
         </div>
-      </div>
-      <!-- Numbers section -->
-      <section class="numbers-section">
-        <div class="numbers-container">
-          <div class="numbers-title">
+    </div>
+
+    <section class="numbers-section">
+        <div class="main-container numbers-container">
+        <div class="numbers-title">
             <h2>A Campe em <br />números</h2>
-          </div>
-          <!-- Stats boxes -->
-          <div class="numbers-box">
+        </div>
+        <div class="numbers-box">
             <div class="numbers-item">
-              <img src="graficoamarelo.jpg" alt="Gráfico Anos de História" />
-              <h3>32</h3>
-              <p>Anos de História</p>
-            </div>
-            <div class="numbers-item">
-              <img src="graficoamarelo.jpg" alt="Gráfico Projetos Realizados" />
-              <h3>+700</h3>
-              <p>Projetos Realizados</p>
+            <img src="graficoamarelo.jpg" alt="Gráfico Anos de História" />
+            <h3>32</h3>
+            <p>Anos de História</p>
             </div>
             <div class="numbers-item">
-              <img src="graficoamarelo.jpg" alt="Gráfico de Satisfação" />
-              <h3>98%</h3>
-              <p>de satisfação dos clientes em 2022</p>
+            <img src="graficoamarelo.jpg" alt="Gráfico Projetos Realizados" />
+            <h3>+700</h3>
+            <p>Projetos Realizados</p>
             </div>
-          </div>
+            <div class="numbers-item">
+            <img src="graficoamarelo.jpg" alt="Gráfico de Satisfação" />
+            <h3>98%</h3>
+            <p>de satisfação dos clientes em 2022</p>
+            </div>
         </div>
-      </section>
-      <!-- Contact info section -->
-      <div class="second-background">
-        <div class="contact-wrapper" id="contactus-container">
-          <div class="contact-us">
-            <p>
-              <h2>Contato</h2>
-              <!-- Description of customer service -->
-              Na nossa empresa, estamos sempre prontos para atender você da melhor
-              forma possível. Sabemos que dúvidas podem surgir a qualquer momento, e
-              por isso, colocamos à disposição nossa equipe para oferecer o suporte
-              necessário. Seja para esclarecer informações, entender nossos serviços
-              ou buscar soluções específicas, estamos aqui para ajudar. Nosso
-              compromisso é garantir que você se sinta seguro e bem informado em cada
-              etapa. Conte conosco para responder suas perguntas com agilidade,
-              atenção e total transparência.
-            </p>
-          </div>
-          <!-- Contact links -->
-          <div class="contact-container">
-            <h2>Fale Conosco</h2>
-            
-            <div class="contact-link">
-              <img src="instagramlogo.jpg" alt="Instagram" class="icon" />
-              <a href="https://www.instagram.com/campeconsultoria" target="_blank">@campeconsultoria</a>
-            </div>
-            
-            <div class="contact-link">
-              <img src="linkedinlogo.jpg" alt="LinkedIn" class="icon" />
-              <a href="https://www.linkedin.com/company/campe-consultoria-jr/" target="_blank">Campe no LinkedIn</a>
-            </div>
-            
-            <div class="contact-link">
-              <img src="emailogo.jpg" alt="Email" class="icon" />
-              <a href="mailto:leonardo.teixeira@campe.com.br">leonardo.teixeira@campe.com.br</a>
-            </div>
-            <div class="contact-link">
-              <img src="emailogo.jpg" alt="Email" class="icon" />
-              <a href="mailto:marylaine.medeiros@campe.com.br">marylaine.medeiros@campe.com.br</a>
-            </div>
-          </div>
         </div>
-        <!-- Footer section -->
-        <div class="footer-campe">
-          <div class="left-footer">
-            <span>Desenvolvedor</span>
-            <img src="linkedinlogo.jpg" alt="Linkedin" class="icon-footer" />
-            <a href="https://www.linkedin.com/in/davi-moljo-52b343255/" target="_blank">
-              Davi Moljo Domingues
-            </a>
-          </div>
-          
-          <div class="right-footer">
-            <span>Todos os direitos reservados</span>
-            <span>Campe Consultoria Jr.</span>
-          </div>
+    </section>
+
+    <div class="second-background">
+        <div class="main-container contact-wrapper" id="contactus-container">
+            <div class="contact-us">
+                <h2>Contato</h2>
+                <p>
+                Na nossa empresa, estamos sempre prontos para atender você da melhor
+                forma possível. Sabemos que dúvidas podem surgir a qualquer
+                momento, e por isso, colocamos à disposição nossa equipe para
+                oferecer o suporte necessário. Seja para esclarecer informações,
+                entender nossos serviços ou buscar soluções específicas, estamos
+                aqui para ajudar. Nosso compromisso é garantir que você se sinta
+                seguro e bem informado em cada etapa. Conte conosco para responder
+                suas perguntas com agilidade, atenção e total transparência.
+                </p>
+            </div>
+            <div class="contact-container">
+                <h2>Fale Conosco</h2>
+
+                <div class="contact-link">
+                <img src="instagramlogo.jpg" alt="Instagram" class="icon" />
+                <a href="https://www.instagram.com/campeconsultoria" target="_blank"
+                    >@campeconsultoria</a
+                >
+                </div>
+
+                <div class="contact-link">
+                <img src="linkedinlogo.jpg" alt="LinkedIn" class="icon" />
+                <a
+                    href="https://www.linkedin.com/company/campe-consultoria-jr/"
+                    target="_blank"
+                    >Campe no LinkedIn</a
+                >
+                </div>
+
+                <div class="contact-link">
+                <img src="emailogo.jpg" alt="Email" class="icon" />
+                <a href="mailto:leonardo.teixeira@campe.com.br"
+                    >leonardo.teixeira@campe.com.br</a
+                >
+                </div>
+                <div class="contact-link">
+                <img src="emailogo.jpg" alt="Email" class="icon" />
+                <a href="mailto:marylaine.medeiros@campe.com.br"
+                    >marylaine.medeiros@campe.com.br</a
+                >
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="script.js" defer></script>
+    <div class="footer-campe">
+        <div class="main-container footer-container">
+            <div class="left-footer">
+                <span>Desenvolvedor</span>
+                <img src="linkedinlogo.jpg" alt="Linkedin" class="icon-footer" />
+                <a
+                href="https://www.linkedin.com/in/davi-moljo-52b343255/"
+                target="_blank"
+                >
+                Davi Moljo Domingues
+                </a>
+            </div>
+    
+            <div class="right-footer">
+                <span>Todos os direitos reservados</span>
+                <span>Campe Consultoria Jr.</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
     </body>
-    </html>
-    
+</html>
