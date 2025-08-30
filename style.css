@@ -26,6 +26,8 @@ a {
    ================================= */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-top: 0px; /* Ajusta o espaçamento superior */
+    padding-bottom: 0px; /* Ajusta o espaçamento inferior */
 }
 
 /* Remove o espaçamento interno para a logo ir mais para a esquerda */
@@ -45,9 +47,7 @@ a {
 }
 
 /* Removemos a regra de centralização automática que estava aqui */
-.navbar .navbar-collapse {
-    /* Vazio de propósito */
-}
+
 
 /* Nova regra para posicionar os links manualmente */
 .navbar .navbar-nav {
@@ -136,7 +136,7 @@ a {
    ================================= */
 .numbers-section {
   background-color: #343a40; 
-  padding: 60px 0;
+  padding: 40px 0;
 }
 .numbers-container {
   display: flex;
@@ -215,6 +215,16 @@ a {
 }
 .contact-link a:hover {
     color: #ffc107;
+    
+}
+.members-photos a .profile-img {
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.members-photos a:hover .profile-img {
+  transform: scale(1.015); /* zoom sutil */
+  opacity: 0.95;
 }
 .icon {
     width: 25px;
@@ -226,7 +236,7 @@ a {
    ================================= */
 .footer-campe {
   background-color: white;
-  padding: 20px 0;
+  padding: 12px 0;
   color: #333;
   font-size: 0.9rem;
 }
@@ -245,8 +255,8 @@ a {
     font-weight: 500;
 }
 .icon-footer {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
 }
 .icon-footer:hover, .left-footer a:hover {
     color: #ffc107;
