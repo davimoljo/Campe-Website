@@ -15,7 +15,3 @@ Esta aplicação funciona como um dashboard para os membros da Campe Consultoria
 
 * **Tecnologias:** HTML, CS3, JavaScript e Bootstrap.
 
-### Autor
-
-- **Davi Moljo Domingues**
-- [LinkedIn](https://www.linkedin.com/in/davi-moljo-52b343255/)
