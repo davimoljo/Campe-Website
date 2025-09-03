@@ -270,7 +270,7 @@ a {
     .about-us, .numbers-container, .contact-wrapper, .footer-container {
         flex-direction: column;
         gap: 40px;
-        text-align: center;
+        text-align: left;
     }
 
     /* Ocupa 100% da largura */
@@ -288,7 +288,7 @@ a {
     }
 
     .contact-link {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .footer-container {
