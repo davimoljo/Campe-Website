@@ -31,7 +31,7 @@ scrollToSection("contato", "contactus-container", 0); // No offset needed
 // Text mappings based on selected scope (escopo)
 const textoPorEscopo = {
   // Original Portuguese text maintained intentionally for Brazilian users
-  "Mapeamento": `Histórico de projetos semelhantes mostra um padrão importante: quanto mais longo o projeto de Mapeamento de Processos, maior a probabilidade de insatisfação relacionada à rotatividade da equipe.
+  Mapeamento: `Histórico de projetos semelhantes mostra um padrão importante: quanto mais longo o projeto de Mapeamento de Processos, maior a probabilidade de insatisfação relacionada à rotatividade da equipe.
 Em especial, a troca de profissionais ao longo do projeto tem causado confusão, perda de contexto e atrasos, comprometendo diretamente a percepção de valor do cliente.
 
 🔍 O que precisamos ter em mente desde o início:
@@ -65,7 +65,7 @@ Esse distanciamento prejudica a coleta de dados, reduz a assertividade das anál
 - Incluir representantes da operação nas reuniões de alinhamento.
 - Garantir que os diagnósticos reflitam a realidade do chão de fábrica ou setor operacional.`,
 
-  "Pesquisa": `Ao lidarmos com projetos de Pesquisa de Mercado, temos enfrentado um desafio recorrente que exige atenção imediata: a falta de aprofundamento técnico na apresentação dos dados.
+  Pesquisa: `Ao lidarmos com projetos de Pesquisa de Mercado, temos enfrentado um desafio recorrente que exige atenção imediata: a falta de aprofundamento técnico na apresentação dos dados.
 
 📌 Principais pontos de atenção:
 - A crítica mais comum está relacionada à forma como os dados são apresentados, especialmente em relatórios e apresentações finais.
@@ -78,7 +78,7 @@ Esse distanciamento prejudica a coleta de dados, reduz a assertividade das anál
 - Garantir que os relatórios sejam claros, mas também robustos e fundamentados.
 - Adaptar a linguagem conforme o perfil do público-alvo, sem perder a consistência técnica.`,
 
-  "Planejamento": `Histórico de projetos semelhantes mostra um padrão crítico: a rotatividade de equipes tem sido uma das principais causas de insatisfação dos clientes.
+  Planejamento: `Histórico de projetos semelhantes mostra um padrão crítico: a rotatividade de equipes tem sido uma das principais causas de insatisfação dos clientes.
 A troca de profissionais ao longo do projeto tem gerado confusão, atrasos e falhas na continuidade, comprometendo a qualidade da entrega e a relação de confiança com o cliente.
 
 🔍 O que precisamos ter em mente desde o início:
@@ -95,7 +95,7 @@ A troca de profissionais ao longo do projeto tem gerado confusão, atrasos e fal
 - Garantir alinhamento contínuo com o cliente e entre os membros da equipe.
 - Manter a maior estabilidade possível no time alocado ao projeto.`,
 
-  "Estruturação": `Apesar do impacto positivo que os projetos de gestão financeira costumam gerar nos resultados das empresas, o atraso nas entregas é um fator de insatisfação recorrente entre os clientes.
+  Estruturação: `Apesar do impacto positivo que os projetos de gestão financeira costumam gerar nos resultados das empresas, o atraso nas entregas é um fator de insatisfação recorrente entre os clientes.
 Mesmo quando o conteúdo é elogiado e o valor agregado é reconhecido, o prazo de entrega se torna um ponto sensível na percepção final do cliente.
 
 🔍 O que precisamos ter em mente desde o início:
@@ -125,7 +125,7 @@ Isso ocorre porque a entrega final supera as expectativas iniciais, tanto pela q
 - Identificar gargalos comuns que geram atraso.
 - Priorizar entregas parciais quando aplicável, para manter a percepção de avanço.
 - Garantir o padrão elevado de atendimento e personalização, que é o diferencial reconhecido pelos clientes.`,
- Nenhum: ''
+  Nenhum: "",
 };
 
 // Text mappings based on company size (porte)
@@ -146,9 +146,7 @@ A coleta de dados realizada até então, muitas vezes com entrevistas rápidas e
 - Incluir especialistas e professores em reuniões-chave para trazer maior rigor técnico.
 - Estabelecer processos claros para garantir conhecimento técnico consistente e compartilhado.
 - Monitorar o andamento com foco na profundidade e qualidade das entregas, atendendo às expectativas das empresas de grande e médio porte.`,
-  
- 
-  
+
   Pequena: `Histórico de projetos semelhantes mostra um padrão claro: a realização de visitas presenciais tem sido um diferencial valorizado especialmente por empresas de menor porte.
 
 A presença física da equipe durante reuniões e a interação direta com o cliente têm garantido uma comunicação mais eficaz, possibilitando ajustes rápidos e melhor alinhamento ao longo do projeto.
@@ -164,12 +162,10 @@ A presença física da equipe durante reuniões e a interação direta com o cli
 - Priorizar visitas presenciais e reuniões físicas sempre que possível.
 - Adaptar o projeto conforme as informações coletadas presencialmente, promovendo ajustes ágeis.
 - Manter um canal aberto e frequente de comunicação para garantir alinhamento contínuo.`,
-  
- 
-  
+
   mej: "",
-  
-  pessoaFisica: ""
+
+  pessoaFisica: "",
 };
 // Text mappings based on client age range (idade)
 const textoIdadeCliente = {
@@ -190,7 +186,6 @@ A percepção de que os projetos superam as expectativas tem sido notada especia
 - Manter um alinhamento contínuo com o cliente, ajustando as entregas conforme necessário para garantir um impacto positivo no negócio.
 `,
 
-  
   senior: `
 A ausência de dados detalhados e análises robustas gerou desconfiança, pois os clientes, particularmente aqueles com mais de 40 anos, esperam que, por ser uma empresa júnior, o nível de entrega seja ainda mais elevado.
 
@@ -210,7 +205,7 @@ A ausência de dados detalhados e análises robustas gerou desconfiança, pois o
 };
 // Text shown if the project does not end this semester
 const finalizaNesteSemestre = {
-  sim: '',
+  sim: "",
   nao: `
 Histórico de projetos semelhantes mostra um padrão crítico: a troca de equipes tem gerado insatisfações, apesar do resultado final do projeto ter sido considerado satisfatório.
 
@@ -229,19 +224,19 @@ A rotatividade de profissionais ao longo do projeto tem causado falhas de comuni
 - Garantir um alinhamento contínuo com o cliente para ajustar expectativas e melhorar a comunicação.
 - Registrar decisões e processos de forma eficiente, assegurando que todos os envolvidos estejam bem informados.
 `,
-  };
+};
 // Checks if enough time has passed to allow resending email (5 minutes)
 function canSendEmail() {
-    const lastSent = localStorage.getItem('lastSent');
-    if (!lastSent) return true;
+  const lastSent = localStorage.getItem("lastSent");
+  if (!lastSent) return true;
 
-    const now = Date.now();
-    return (now - lastSent) > 5*60000; // 60 segundos
+  const now = Date.now();
+  return now - lastSent > 5 * 60000; // 60 segundos
 }
 
 // Updates the time the form was last submitted
 function updateLastSentTime() {
-    localStorage.setItem('lastSent', Date.now());
+  localStorage.setItem("lastSent", Date.now());
 }
 
 // On page load, set up form submission handler
@@ -274,7 +269,7 @@ window.onload = function () {
           porte: porte.options[porte.selectedIndex].innerText,
           idade: idade.options[idade.selectedIndex].innerText,
           finaliza: finaliza.options[finaliza.selectedIndex].innerText,
-          email
+          email,
         }),
       })
         .then((response) => response.text())
@@ -286,21 +281,23 @@ window.onload = function () {
         });
 
       // Send email using EmailJS
-      emailjs.send("service_wj8lsfi", "template_wlgsysk", {
-        texto1: textoPorEscopo[escopo.value],
-        texto2: tamanhoEmpresaTexto[porte.value],
-        texto3: textoIdadeCliente[idade.value],
-        texto4: finalizaNesteSemestre[finaliza.value],
-        email
-      }).then(
-        () => {
-          console.log("SUCCESS!");
-          alert("Formulário enviado com sucesso! Cheque o seu email.");
-          updateLastSentTime();
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
+      emailjs
+        .send("service_wj8lsfi", "template_wlgsysk", {
+          texto1: textoPorEscopo[escopo.value],
+          texto2: tamanhoEmpresaTexto[porte.value],
+          texto3: textoIdadeCliente[idade.value],
+          texto4: finalizaNesteSemestre[finaliza.value],
+          email,
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            alert("Formulário enviado com sucesso! Cheque o seu email.");
+            updateLastSentTime();
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
     });
 };

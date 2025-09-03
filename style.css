@@ -1,16 +1,15 @@
 /* =================================
-   ESTILOS GERAIS E PADRÃO DO CONTEÚDO
+   General and Base Styles
    ================================= */
 body * {
   font-family: "Montserrat", system-ui;
 }
 
-/* Define um container principal para alinhar o conteúdo */
 .main-container {
-    width: 100%;
-    max-width: 1140px; /* Largura padrão para o conteúdo */
-    margin: 0 auto;
-    padding: 0 20px; /* Espaçamento lateral de segurança */
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 a {
@@ -19,43 +18,34 @@ a {
 }
 
 /* =================================
-   NAVBAR
-   ================================= */
-/* =================================
-   NAVBAR
+   Navbar
    ================================= */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding-top: 0px; /* Ajusta o espaçamento superior */
-    padding-bottom: 0px; /* Ajusta o espaçamento inferior */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-/* Remove o espaçamento interno para a logo ir mais para a esquerda */
 .navbar .main-container {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-brand img {
-    width: 180px; 
-    height: auto;
+  width: 180px;
+  height: auto;
 }
 
 .navbar .nav-link {
-    color: #333 !important;
-    
+  color: #333 !important;
 }
 
-/* Removemos a regra de centralização automática que estava aqui */
-
-
-/* Nova regra para posicionar os links manualmente */
 .navbar .navbar-nav {
-    /* Empurra os links para uma posição mais à esquerda do centro */
-    margin-left: 30%;
+  margin-left: 30%;
 }
+
 /* =================================
-   SEÇÃO DO FORMULÁRIO (TOPO)
+   Hero & Form Section
    ================================= */
 .first-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -66,76 +56,74 @@ a {
   color: white;
 }
 #first-container {
-    padding-bottom: 100px; /* Adiciona espaço entre o formulário e a seção "Sobre nós" */
+  padding-bottom: 100px;
 }
 #contact-form {
-    max-width: 100%; /* Limita a largura do formulário */
+  max-width: 100%;
 }
 .title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 .form-label {
-    color: white;
+  color: white;
 }
 
 /* =================================
-   SEÇÃO SOBRE NÓS
+   About Us Section
    ================================= */
-/* A REGRA .about-us-section foi removida */
 .about-us {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .text-aboutus {
-    width: 58%; /* Mais espaço para o texto */
+  width: 58%;
 }
 .text-aboutus h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .text-aboutus p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #f8f9fa;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f8f9fa;
 }
 .members-photos {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
 }
 .profile-link {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 .profile-link:hover {
-    color: #ffc107; /* Amarelo da Campe */
+  color: #ffc107;
 }
 .profile-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 .profile-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 .profile-role {
-    font-size: 1.1rem;
-    color: #adb5bd;
+  font-size: 1.1rem;
+  color: #adb5bd;
 }
 
-
 /* =================================
-   SEÇÃO NÚMEROS
+   Numbers Section
    ================================= */
 .numbers-section {
-  background-color: #343a40; 
+  background-color: #343a40;
   padding: 40px 0;
 }
 .numbers-container {
@@ -172,7 +160,7 @@ a {
 }
 
 /* =================================
-   SEÇÃO CONTATO
+   Contact Section
    ================================= */
 .second-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -184,55 +172,53 @@ a {
   align-items: center;
 }
 .contact-wrapper {
-  
   display: flex;
   justify-content: space-between;
   color: white;
 }
 .contact-us {
-    width: 55%;
+  width: 55%;
 }
-.contact-us h2, .contact-container h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.contact-us h2,
+.contact-container h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .contact-us p {
-    line-height: 1.6;
-    color: #f8f9fa;
+  line-height: 1.6;
+  color: #f8f9fa;
 }
 .contact-container {
-    width: 40%;
+  width: 40%;
 }
 .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 .contact-link a {
-    color: white;
+  color: white;
 }
 .contact-link a:hover {
-    color: #ffc107;
-    
+  color: #ffc107;
 }
 .members-photos a .profile-img {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   cursor: pointer;
 }
-
 .members-photos a:hover .profile-img {
-  transform: scale(1.015); /* zoom sutil */
+  transform: scale(1.015);
   opacity: 0.95;
 }
 .icon {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 /* =================================
-   RODAPÉ
+   Footer
    ================================= */
 .footer-campe {
   background-color: white;
@@ -241,61 +227,71 @@ a {
   font-size: 0.9rem;
 }
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.left-footer, .right-footer {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.left-footer,
+.right-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .left-footer a {
-    color: #333;
-    font-weight: 500;
+  color: #333;
+  font-weight: 500;
 }
 .icon-footer {
-    width: 22px;
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
-.icon-footer:hover, .left-footer a:hover {
-    color: #ffc107;
+.icon-footer:hover,
+.left-footer a:hover {
+  color: #ffc107;
 }
 
 /* =================================
-   RESPONSIVIDADE (TABLET E CELULAR)
+   Responsive Styles (Tablet & Mobile)
    ================================= */
 @media (max-width: 991px) {
-    /* Ajusta todos os layouts de flex para coluna */
-    .about-us, .numbers-container, .contact-wrapper, .footer-container {
-        flex-direction: column;
-        gap: 40px;
-        text-align: left;
-    }
+  .about-us,
+  .numbers-container,
+  .contact-wrapper,
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+  }
 
-    /* Ocupa 100% da largura */
-    .text-aboutus, .members-photos, .contact-us, .contact-container {
-        width: 100%;
-    }
-    
-    #first-container {
-        padding-bottom: 60px;
-    }
+  .text-aboutus,
+  .members-photos,
+  .contact-us,
+  .contact-container {
+    width: 100%;
+  }
 
-    .members-photos {
-        flex-direction: column;
-        align-items: center;
-    }
+  #first-container {
+    padding-bottom: 60px;
+  }
 
-    .contact-link {
-        justify-content: flex-start;
-    }
-    
-    .footer-container {
-        gap: 20px;
-    }
-    .right-footer {
-        flex-direction: column;
-        gap: 5px;
-    }
+  .members-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    justify-content: flex-start;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .right-footer {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    text-align: center;
+  }
 }
