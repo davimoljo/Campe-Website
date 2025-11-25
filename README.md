@@ -1,22 +1,3 @@
-# Ferramenta Interna para Cadastro de Projetos
-
-> Aplicação web desenvolvida para uso interno da Campe Consultoria Jr., servindo como um sistema de registro de projetos pós-venda. A ferramenta otimiza o processo de armazenamento de dados dos clientes e automatiza fluxos de trabalho através da integração com APIs.
-
-### Sobre o Projeto
-Esta aplicação funciona como um formulário interativo para os clientes da Campe Consultoria cadastrarem informações de seus novos projetos. O objetivo é centralizar os dados dos clientes em um histórico organizado e, a partir do envio do formulário, analisar a experiência do cliente a partir de padrões coletados. Assim, o objetivo é aprimorar todo o processo de pós-venda da Campe, visando uma aprimoramento do seu relacionamento com cliente e redução da taxa de churn, ao ser possível enxergar padrões de características de clientes e personalizar a abordagem de execução do projeto com elas.
-
-### Habilidades e Tecnologias
-
-* **UI/UX:** O projeto foi pensado para ser uma ferramenta interna eficiente e de fácil utilização. A interface (UI) é limpa e direta para agilizar o preenchimento dos dados. A experiência de uso (UX) foca na praticidade e na garantia de que os membros da equipe possam registrar informações de forma rápida e sem erros, em qualquer dispositivo, graças ao design responsivo.
-
-* **Integração de APIs:**
-    * **Make.com:** Os dados do formulário são enviados via **webhook** para o Make.com, servindo como base de dados em uma planilha do Excel e gatilho para outros processos internos.
-    * **EmailJS:** A integração com EmailJS permite o envio automatizado de e-mails assim que um novo cliente é registrado.
-
-* **Tecnologias:** HTML, CSS, JavaScript e Bootstrap.
-
-  
-# In English
 # Internal Tool for Project Registration
 
 > Web application developed for internal use at Campe Consultoria Jr., serving as a post-sales project registration system. The tool streamlines the process of storing client data and automates workflows through API integration.
@@ -34,3 +15,19 @@ This application works as an interactive form for Campe Consultoria’s clients 
 
 * **Technologies:** HTML, CSS, JavaScript, and Bootstrap.
 
+# Ferramenta Interna para Cadastro de Projetos
+
+> Aplicação web desenvolvida para uso interno da Campe Consultoria Jr., servindo como um sistema de registro de projetos pós-venda. A ferramenta otimiza o processo de armazenamento de dados dos clientes e automatiza fluxos de trabalho através da integração com APIs.
+
+### Sobre o Projeto
+Esta aplicação funciona como um formulário interativo para os clientes da Campe Consultoria cadastrarem informações de seus novos projetos. O objetivo é centralizar os dados dos clientes em um histórico organizado e, a partir do envio do formulário, analisar a experiência do cliente a partir de padrões coletados. Assim, o objetivo é aprimorar todo o processo de pós-venda da Campe, visando uma aprimoramento do seu relacionamento com cliente e redução da taxa de churn, ao ser possível enxergar padrões de características de clientes e personalizar a abordagem de execução do projeto com elas.
+
+### Habilidades e Tecnologias
+
+* **UI/UX:** O projeto foi pensado para ser uma ferramenta interna eficiente e de fácil utilização. A interface (UI) é limpa e direta para agilizar o preenchimento dos dados. A experiência de uso (UX) foca na praticidade e na garantia de que os membros da equipe possam registrar informações de forma rápida e sem erros, em qualquer dispositivo, graças ao design responsivo.
+
+* **Integração de APIs:**
+    * **Make.com:** Os dados do formulário são enviados via **webhook** para o Make.com, servindo como base de dados em uma planilha do Excel e gatilho para outros processos internos.
+    * **EmailJS:** A integração com EmailJS permite o envio automatizado de e-mails assim que um novo cliente é registrado.
+
+* **Tecnologias:** HTML, CSS, JavaScript e Bootstrap.
